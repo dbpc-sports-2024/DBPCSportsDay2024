@@ -1,7 +1,7 @@
 /* Wrapper for Center Alignment */
 @font-face {
     font-family: 'Varsity'; /* Define the name of the font */
-    src: url('/static/VarsityTeam-Bold.otf') format('opentype');
+    src: url('/VarsityTeam-Bold.otf') format('opentype');
 /*    src: url('/BaseballClubSolid-E4X69.ttf') format('opentype'); */
 }
 @font-face{
