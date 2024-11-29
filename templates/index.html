@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Day 2024</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <style>
+        /* Add Google font */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+    </style>
+</head>
+
+    <body>
+
+        <!-- Preloader Section -->
+        <div id="preloader">
+            <img src="{{ url_for('static', filename='DBPC.png') }}" alt="Sports Day Logo" class="preloader-logo">
+            <div class="quadrant red"></div>
+            <div class="quadrant blue"></div>
+            <div class="quadrant green"></div>
+            <div class="quadrant yellow"></div>
+        </div>
+
+        <!-- Navbar with Hamburger Menu -->
+        <div class="hamburger-container">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav id="mobile-menu" class="mobile-menu">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="#check-results">Check Results</a></li>
+              <li><a href="/developers">Developers</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="wrapper">
+            <div class="header">
+                <h1>SPORTS DAY 2024</h1>
+            </div>
+
+            <!-- House Points Section -->
+            <div class="house-points">
+                <div class="strip-container">
+                    <div class="strip red">
+                        <div class="scoreboard">
+                            <span id="redBox" class="points">0</span>
+                        </div>
+                        <span class="house-name">Savio</span>
+                    </div>
+                    <div class="strip blue">
+                        <div class="scoreboard">
+                            <span id="blueBox" class="points">0</span>
+                        </div>
+                        <span class="house-name">Bosco</span>
+                    </div>
+                    <div class="strip green">
+                        <div class="scoreboard">
+                            <span id="greenBox" class="points">0</span>
+                        </div>
+                        <span class="house-name">Rua</span>
+                    </div>
+                    <div class="strip yellow">
+                        <div class="scoreboard">
+                            <span id="yellowBox" class="points">0</span>
+                        </div>
+                        <span class="house-name">Francis</span>
+                    </div>
+                </div>
+
+            <div class="text-container">
+                <p>DBPC (Don Bosco Park Circus) Sports Day is an annual event that embodies the spirit of sportsmanship and camaraderie among students. The event typically features a variety of athletic competitions, including track and field events, relays, and team sports. Students of all ages participate, showcasing their talents and determination. The day begins with a colorful parade, where students march proudly representing their respective houses. The opening ceremony often includes motivational speeches.</p>
+            </div>
+            <!-- Video Section -->
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E-Po06nG9Mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Event Results Section -->
+            <div class="text-container">
+                <h2 id="check-results">Check Results</h2>
+
+                <!-- Event Selector Dropdown -->
+                <label for="event-selector"></label>
+                <select id="event-selector">
+                    <option value="">Select an event</option>
+                    <option value="100 Meters (Class - 3)">100 Meters (Class - 3)</option>
+                    <option value="100 Meters (Class - 4)">100 Meters (Class - 4)</option>
+                    <option value="100 Meters (Class - 5)">100 Meters (Class - 5)</option>
+                    <option value="200 Metres (Class - 5)">200 Metres (Class - 5)</option>
+                    <option value="200 Metres (Class - 3)">200 Metres (Class - 3)</option>
+                    <option value="200 Meters (Class - 4)">200 Meters (Class - 4)</option>
+                    <option value="400 Meters (Class - 5)">400 Meters (Class - 5)</option>
+                    <option value="75 Metres (Class - 4)">75 Metres (Class - 4)</option>
+                    <option value="75 Metres (Class - 5)">75 Metres (Class - 5)</option>
+                    <option value="75 Metres (Class - 3)">75 Metres (Class - 3)</option>
+                    <option value="Balance Race (Class - 3)">Balance Race (Class - 3)</option>
+                    <option value="Basketball Throw (Class - 4)">Basketball Throw (Class - 4)</option>
+                    <option value="Biscuit Race (Class - 5)">Biscuit Race (Class - 5)</option>
+                    <option value="Get Ready for School (Class - 3)">Get Ready for School (Class - 3)</option>
+                    <option value="Long Jump (Class 3)">Long Jump (Class 3)</option>
+                    <option value="Long Jump (Class 4)">Long Jump (Class 4)</option>
+                    <option value="Long Jump (Class 5)">Long Jump (Class 5)</option>
+                    <option value="Obstacle Race (Class - 4)">Obstacle Race (Class - 4)</option>
+                    <option value="Obstacle Race (Class - 5)">Obstacle Race (Class - 5)</option>
+                    <option value="Bursting the Balloon (Class - 3)">Plucking the Tail (Class - 3)</option>
+                    <option value="Sack Race (Class - 4)">Sack Race (Class - 4)</option>
+                    <option value="Sack Race (Class - 5)">Sack Race (Class - 5)</option>
+                    <option value="Spoon and Marble Race (Class - 4)">Spoon and Marble Race (Class - 4)</option>
+                    <option value="Tennis Ball Race (Class 3)">Tennis Ball Race (Class 3)</option>
+                    <option value="Tug-O-War (Class - 5)">Tug-O-War (Class - 5)</option>
+                    <option value="Tunnel Ball (Class - 3/4/5)">Tunnel Ball (Class - 3/4/5)</option>
+                </select>
+
+
+
+
+                <!-- Error Message Display -->
+                <p id="error-message" class="error-message" style="display: none;">The points for this event will be available soon.</p>
+
+                <!-- Results Table -->
+                <div class="table-container">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>House</th>
+                                <th>Name</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be injected here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        <!-- Link to the external JavaScript file -->
+        <script type="module" src="script.js"></script>
+        <script>
+          // Wait for 2 seconds before hiding the preloader
+          window.onload = function() {
+            setTimeout(function() {
+              // Hide the preloader after 2 seconds
+              document.getElementById('preloader').style.display = 'none';
+            }, 4000); // 2000 milliseconds = 4 seconds
+          };
+
+          // Function to toggle mobile menu visibility
+          function toggleMenu() {
+              const menu = document.getElementById('mobile-menu');
+              menu.classList.toggle('show');  // Toggle the "show" class to display/hide the menu
+          }
+        </script>
+    </body>
+    </html>
