@@ -292,8 +292,9 @@ iframe {
 /* Event Picker (Select Dropdown) */
 #event-selector {
     font-family: 'Nunito', sans-serif;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 1.1rem;
+    font-weight: normal; /* Regular weight for options except the first one */
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -308,7 +309,22 @@ iframe {
     border-color: #4a59b3;
     box-shadow: 0 0 5px rgba(74, 89, 179, 0.5);
 }
+/* Bold the "Select an Event" option */
+#event-selector option:first-child {
+    font-weight: bold;
+}
 
+/* Add space between arrow and edge */
+#event-selector::after {
+    content: '▼'; /* Unicode character for dropdown arrow */
+    font-size: 0.8rem;
+    color: #4a59b3;
+    position: absolute;
+    right: 15px; /* Space from the edge */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interaction with the arrow */
+}
 body, p, .text-container, .table-container, .form-inline label, table th, table td {
     font-family: 'Nunito', sans-serif;
 }
