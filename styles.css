@@ -320,7 +320,7 @@ iframe {
     font-size: 0.8rem;
     color: #4a59b3;
     position: absolute;
-    right: 15px; /* Space from the edge */
+    right: 25px; /* Space from the edge */
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none; /* Prevent interaction with the arrow */
