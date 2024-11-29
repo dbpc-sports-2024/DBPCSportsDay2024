@@ -1,0 +1,500 @@
+/* Wrapper for Center Alignment */
+@font-face {
+    font-family: 'Varsity'; /* Define the name of the font */
+    src: url('/static/VarsityTeam-Bold.otf') format('opentype');
+/*    src: url('/BaseballClubSolid-E4X69.ttf') format('opentype'); */
+}
+@font-face{
+    font-family: 'Radley';
+    src: url('/RadleySans-ZVYBK.ttf') format('opentype');
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+h1{
+    color: white;
+    font-family: 'Varsity', sans-serif;
+
+    font-size: 5rem;
+}
+h2{
+    color: white;
+    font-family: 'Varsity', sans-serif;
+
+    font-size: 3rem;
+}
+
+body {
+    background: url('background.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white; /* Text color for contrast */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(45deg, #4a59b3, #1c1c47);
+    color: white; /* This sets the default text color for the header */
+    padding: 2rem;
+    text-align: center;
+    width: 100%; /* Ensure header takes full width */
+}
+
+header h1 {
+    font-family: 'Varsity', sans-serif;      font-weight: bold;
+    color: white; /* Ensure heading text is white */
+    letter-spacing: 2px;
+    margin: 0; /* Remove default margin */
+}
+.text-container p{
+    background-color: #72707087;
+    justify-content : ;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+
+    text-align: justify; /* Center-aligns text within the textbox */
+    font-weight: bold;
+}
+.text-container {
+    justify-content : ;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center; /* Centers the heading within the container */
+    margin: 0; /* Optional: removes default margin for more control over spacing */
+}
+
+header p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    color: white; /* Ensure paragraph text is white */
+    margin: 0 auto; /* Center paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    header p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+/* House Points */
+.house-points .house-point {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 80%; /* Ensure the house-points container does not exceed 80% of the screen width */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Color Styles */
+.red { background-color: red; }
+.blue { background-color: rgb(32, 32, 190); }
+.green { background-color: rgb(16, 75, 16); }
+.yellow { background-color: rgb(139, 139, 9); }
+
+/* Container for House Strips */
+.strip-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding the blackboard-like box around the points */
+.scoreboard {
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.scoreboard .points {
+    font-size: 22px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+/* Adjusting alignment of house-name and points */
+.strip .house-name {
+    flex: 1;
+    text-align: center;
+}
+
+/* Shine effect */
+.strip::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    transform: skewX(-20deg);
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.strip:hover::before {
+    left: 100%;
+    transition: 0.5s;
+}
+
+/* Form Styles */
+.form-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-inline label {width: 30px;
+    font-weight: bold;
+}
+
+.form-inline select,
+.form-inline button {
+    min-width: 150px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-inline button {
+    font-weight: bold;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: right;
+    background-color: #ffffff; /* Dark neon green */
+    color: rgb(247, 247, 247);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; 
+    border: 2px solid #ffffff;
+    align-self: center;
+}
+table {
+    width: 100%; /* Ensure the table takes the full width of the .table container */
+}
+table th, table td {
+    border: 1px solid #ffffff;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, .2);
+    align-self: center;
+    color: white;
+
+}
+
+table th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(245, 243, 243);
+
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+table tr:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Video and iframe styling */
+.video-container {
+    margin-top: 20px;
+}
+
+iframe {
+    width: 80%; /* Adjusted width to 80% of its container */
+    max-width: 480px; /* Reduced max-width */
+    height: 270px; /* Reduced height */
+    border-radius: 10px;
+    border: 3px solid rgb(247 244 244 / 79%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+    .text{
+    color:#ffffff
+}
+/* Form Title and Label Styling */
+#eventForm h2, 
+#eventForm label {
+    color: #ffffff; /* Set color to white */
+}
+
+#eventForm select, #eventForm button {
+    color: #ffffff; /* Set the color of text inside select boxes and button to white */
+    background-color: #1a1a1d; /* Optional: Darken background to make white text pop */
+    border: 1px solid #0FFF50; /* Optional: Border color to match theme */
+}
+
+#eventForm button {
+    background-color: #0FFF50;
+    color: #000000; /* Text color on button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#eventForm button:hover {
+    background-color: #00b36b;
+}
+
+/* Event Picker (Select Dropdown) */
+#event-selector {
+    font-family: 'Nunito', sans-serif;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+    margin: 20px 0;
+}
+
+#event-selector:hover,
+#event-selector:focus {
+    border-color: #4a59b3;
+    box-shadow: 0 0 5px rgba(74, 89, 179, 0.5);
+}
+
+body, p, .text-container, .table-container, .form-inline label, table th, table td {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* Hide content initially */
+.hidden {
+    display: none;
+}
+
+/* Preloader full screen container */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #1c1c22;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Logo rise animation */
+.preloader-logo {
+  width: 200px; /* Increase size from 100px */
+  height: 200px; /* Increase size from 100px */
+  position: absolute;
+  z-index: 100;
+  animation: rise 1.5s ease-out forwards;
+}
+
+/* Quadrant base styling */
+.quadrant {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform: scale(0);
+  opacity: 0;
+  animation: expand-quad 2s ease-out forwards;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Quadrant background images and positioning */
+.red {
+  background-image: url('red-texture.png'); /* Replace with the path to the red-texture image */
+  top: 0;
+  left: 0;
+  animation-delay: 1s;
+}
+
+.blue {
+  background-image: url('blue-texture.png'); /* Replace with the path to the blue-texture image */
+  top: 0;
+  right: 0;
+  animation-delay: 1.2s;
+}
+
+.green {
+  background-image: url('green-texture.png'); /* Replace with the path to the green-texture image */
+  bottom: 0;
+  left: 0;
+  animation-delay: 1.4s;
+}
+
+.yellow {
+  background-image: url('yellow-texture.png'); /* Replace with the path to the yellow-texture image */
+  bottom: 0;
+  right: 0;
+  animation-delay: 1.6s;
+}
+
+/* Keyframes for logo rising */
+@keyframes rise {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+/* Keyframes for expanding quadrants */
+@keyframes expand-quad {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1); /* Ensures each quadrant fills 25% of the screen */
+    opacity: 1;
+  }
+}
+
+/* Styles for the hamburger icon */
+.hamburger-container {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Hamburger lines */
+.hamburger-icon {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-icon:hover span {
+    background-color: #03dac5; /* Hover effect for a touch of interaction */
+}
+
+/* Mobile Menu Styling */
+#mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    background-color: #1e1e1e; /* Dark background for menu */
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for elegance */
+    width: 200px;
+}
+
+#mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-menu li {
+    margin: 10px 0;
+}
+
+#mobile-menu a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-family: 'Varsity', sans-serif;
+    transition: color 0.3s ease;
+}
+
+#mobile-menu a:hover {
+    color: #03dac5; /* Color shift on hover */
+}
+
+/* Show the mobile menu when toggled */
+#mobile-menu.show {
+    display: block;
+}
+
+/* Ensure that the hamburger icon is visible on all screen sizes */
+@media (max-width: 768px) {
+    .hamburger-container {
+        display: flex;
+    }
+}
+
+
+
+/* Add padding to the bottom of the wrapper */
+.wrapper {
+    padding-bottom: 40px; /* Adjust the value as needed */
+}
