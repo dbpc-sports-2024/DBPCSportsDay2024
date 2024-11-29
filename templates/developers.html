@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers - Sports Day 2024</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Base styling for a sophisticated dark theme */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            font-family: Arial, sans-serif; /* General text font for readability */
+        }
+
+        .developer-container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+
+        h1, h2 {
+            font-family: 'Varsity', sans-serif;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #e5e5e5; /* Elegant soft purple for main headings */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #b8b8b8;
+            margin: 5px 0;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        h2:hover {
+            color: #03dac5; /* Subtle hover color change for sophistication */
+        }
+
+        /* Styles for the hamburger icon */
+        .hamburger-container {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        /* Hamburger lines */
+        .hamburger-icon {
+            width: 30px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger-icon span {
+            width: 100%;
+            height: 3px;
+            background-color: #e5e5e5;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hamburger-icon:hover span {
+            background-color: #03dac5; /* Hover effect for a touch of interaction */
+        }
+
+        /* Mobile Menu Styling */
+        #mobile-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 15px;
+            background-color: #1e1e1e; /* Dark background for menu */
+            border: 1px solid #333;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for elegance */
+            width: 200px;
+        }
+
+        #mobile-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #mobile-menu li {
+            margin: 10px 0;
+        }
+
+        #mobile-menu a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 1rem;
+            font-family: 'Varsity', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        #mobile-menu a:hover {
+            color: #03dac5; /* Color shift on hover */
+        }
+
+        /* Show the mobile menu when toggled */
+        #mobile-menu.show {
+            display: block;
+        }
+
+        /* Ensure that the hamburger icon is visible on all screen sizes */
+        @media (max-width: 768px) {
+            .hamburger-container {
+                display: flex;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- Navbar with Hamburger Menu -->
+    <div class="hamburger-container">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#check-results">Check Results</a></li>
+            <li><a href="/developers">Developers</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="developer-container">
+        <h1>Developers</h1>
+        <h2>Ritwik Kapur</h2>
+        <h2>Abhay Poddar</h2>
+        <h2>Ashaz Ali Azhar</h2>
+        
+        <h1>Tech Team Head</h1>
+        <h2>Sir Sanchayan Kumar Ray</h2>
+
+        <h2>DBPC Tech Team 2024-25</h2>
+
+    </div>
+
+    <script>
+      // Function to toggle mobile menu visibility
+      function toggleMenu() {
+          const menu = document.getElementById('mobile-menu');
+          menu.classList.toggle('show');  // Toggle the "show" class to display/hide the menu
+      }
+    </script>
+</body>
+</html>
