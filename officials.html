@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developers - Sports Day 2024</title>
+    <title>Sports Day 2024 - Officials & Details</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Base styling for a sophisticated dark theme */
         body {
             display: flex;
             justify-content: center;
@@ -15,164 +14,111 @@
             margin: 0;
             background-color: #121212; /* Dark background */
             color: #e0e0e0; /* Light text color */
-            font-family: Arial, sans-serif; /* General text font for readability */
+            font-family: Arial, sans-serif;
+            padding: 20px;
         }
 
-        .developer-container {
-            text-align: center;
-            padding: 20px;
-            max-width: 600px;
+        .content-container {
+            max-width: 800px;
             background: #1e1e1e;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
         }
 
         h1, h2 {
             font-family: 'Varsity', sans-serif;
-            margin: 10px 0;
+            color: #03dac5;
+            margin-bottom: 10px;
         }
 
-        p {
-            font-size: 1rem;
-            color: #e5e5e5; /* Elegant soft purple for main headings */
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            color: #b8b8b8;
-            margin: 5px 0;
-            transition: color 0.3s ease; /* Smooth color transition */
-        }
-
-        h2:hover {
-            color: #03dac5; /* Subtle hover color change for sophistication */
-        }
-
-        /* Styles for the hamburger icon */
-        .hamburger-container {
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        /* Hamburger lines */
-        .hamburger-icon {
-            width: 30px;
-            height: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .hamburger-icon span {
-            width: 100%;
-            height: 3px;
-            background-color: #e5e5e5;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .hamburger-icon:hover span {
-            background-color: #03dac5; /* Hover effect for a touch of interaction */
-        }
-
-        /* Mobile Menu Styling */
-        #mobile-menu {
-            display: none;
-            position: absolute;
-            top: 60px;
-            left: 15px;
-            background-color: #1e1e1e; /* Dark background for menu */
-            border: 1px solid #333;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for elegance */
-            width: 200px;
-        }
-
-        #mobile-menu ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #mobile-menu li {
-            margin: 10px 0;
-        }
-
-        #mobile-menu a {
-            text-decoration: none;
+        p, ul {
+            margin-bottom: 15px;
             color: #e0e0e0;
-            font-size: 1rem;
-            font-family: 'Varsity', sans-serif;
-            transition: color 0.3s ease;
+            line-height: 1.6;
         }
 
-        #mobile-menu a:hover {
-            color: #03dac5; /* Color shift on hover */
+        ul {
+            list-style: none;
+            padding-left: 0;
         }
 
-        /* Show the mobile menu when toggled */
-        #mobile-menu.show {
-            display: block;
+        ul li {
+            margin-bottom: 8px;
         }
 
-        /* Ensure that the hamburger icon is visible on all screen sizes */
-        @media (max-width: 768px) {
-            .hamburger-container {
-                display: flex;
-            }
+        .section {
+            margin-bottom: 25px;
         }
-        
-
     </style>
 </head>
 <body>
-    <!-- Navbar with Hamburger Menu -->
-    <div class="hamburger-container">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="mobile-menu" class="mobile-menu">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html#check-results">Check Results</a></li>
-            <li><a href="/developers.html">Developers</a></li>
-        </ul>
-      </nav>
+    <div class="content-container">
+        <h1>Sports Day 2024</h1>
+
+        <div class="section">
+            <h2>Chief Guest</h2>
+            <p>Mr. Praveen Kumar Tripathi, IPS (Commissioner of Police, Howrah)</p>
+        </div>
+
+        <div class="section">
+            <h2>Sports Day Officials</h2>
+            <ul>
+                <li><b>President:</b> Rev. Fr. V.C. George, sdb (Rector & Principal)</li>
+                <li><b>Convener:</b> Rev. Fr. Hansel Dutta, sdb (Vice Principal)</li>
+                <li><b>Marshals:</b> Rev. Fr. Francis Gomes, sdb (Asst. Principal)</li>
+                <li><b>Guests:</b> 
+                    <ul>
+                        <li>Rev. Fr. M.J. Jose, sdb (Bursar)</li>
+                        <li>Rev. Fr. Joseph Podimattahil, sdb (Principal-Tech)</li>
+                        <li>Rev. Fr. T. Albert, sdb (Counselor)</li>
+                        <li>Rev. Fr. T.C. Joseph (Counselor)</li>
+                    </ul>
+                </li>
+                <li><b>Events In-Charge:</b> Mr. Ryan Charlie, Mr. Kallol Ghosh</li>
+                <li><b>Announcers:</b> Mrs. Juliana Thomas, Mrs. Germaine Scolt</li>
+                <li><b>Starters:</b> Mr. Ryan Charlie, Mr. Kallol Ghosh</li>
+                <li><b>Starting Line:</b> Mr. Bablu Mondal, Mr. Peter Gomes</li>
+                <li><b>Track Judges:</b> Mrs. Shely Das, Mrs. Lina Mondal, Mrs. Gillian Culpeper</li>
+                <li><b>Field Recorders of Winners:</b> Mr. Jerome Fernando, Mr. Clement Gomes</li>
+                <li><b>Scouts In-Charge:</b> Mr. Peter Gomes, Mr. Aniket Mondal</li>
+                <li><b>Official Recorders of Points:</b> Mr. Sanchayan Ray & Tech Team</li>
+                <li><b>Finish Line-I:</b> Ms. Charlene Philips, Mr. Anup Chowdhury, Mr. Abhik Karmakar</li>
+                <li><b>Finish Line-II:</b> Fr. Albert Kom, Bro. Paul, Bro. Stephen</li>
+                <li><b>Victory Stand:</b> DB Scouts/Volunteers</li>
+                <li><b>Prizes/Medals:</b> Mrs. Karen Wheeler, Mrs. Ritika Jain, Ms. Salina Sherman</li>
+                <li><b>First Aid:</b> Mrs. Bharti Das (Nurse), DB Scouts</li>
+                <li><b>House Points:</b> Mr. Jonathan Mahapatra, Mr. Francis Halder</li>
+                <li><b>Equipment:</b> Mr. Sukol Murmu, Mr. Sebastian Hansda, Mr. Patrick Rozario, Mr. Tandel Hansda</li>
+                <li><b>Sound System:</b> Md. Faiyaz, Mr. Som Mardi, Mr. Fredrick Mistry</li>
+                <li><b>Reception:</b> Ms. Christine Mendez, Mrs. Ritika Jain, Ms. Salina Sherman</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Teachers In-Charge of Classes</h2>
+            <ul>
+                <li><b>LKG:</b> Ms. Victoria King, Ms. Rosemary Gomes, Mrs. Sylvia Gomes</li>
+                <li><b>KG:</b> Mrs. Germaine Scolt, Mrs. Nancy Thapa, Mrs. Arpita Gomes</li>
+                <li><b>Class 1:</b> Ms. Avipsa Kazi, Mrs. Maya Biadya, Mrs. Reenita Rao, Mrs. Suzana Bose, Mrs. Annie Sirsa</li>
+                <li><b>Class 2:</b> Mrs. Marina Minj, Mrs. Priyanka Biswas, Mrs. Soma Dey, Mrs. Lucy Mondol, Mrs. Gloria Lewis</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Teachers In-Charge of Houses</h2>
+            <ul>
+                <li><b>Red House:</b> Mrs. Swati Chowdhury, Mrs. Margaret Gomes, Mrs. Emilia Mondol, Mrs. Devamanohari Fernando, Mrs. Sonia Hans, Mr. Bablu Mondol</li>
+                <li><b>Blue House:</b> Ms. Stuti Khanna, Ms. Eden Tseng, Ms. Claudia Gonsalves, Mrs. Nitu Tigga, Mrs. Anna Singh</li>
+                <li><b>Green House:</b> Mrs. Jyothi Harney, Mrs. Puja Banerjee, Mrs. Paromita Jana, Mrs. Cynithia George, Ms. Tania Das Gupta, Mrs. Tanusree Biswas</li>
+                <li><b>Yellow House:</b> Mrs. Christina Raphael, Mrs. Mumpy Das, Ms. Rishita Roychowdhury, Mrs. Hema Minocha, Mrs. Shimantini Bhattacharyya, Mrs. Bharti Dutta, Mrs. Vinita Jhawar</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Acknowledgments</h2>
+            <p>Our sincere appreciation and gratitude to the Kolkata Police band and Mr. Nadir Shah for logistics.</p>
+        </div>
     </div>
-    <div class="developer-container">
-        <h2>Developers</h2>
-        <p>Ritwik Kapur</p>
-        <p>Abhay Poddar</p>
-        <p>Ashaz Ali Azhar</p>
-        
-        <h2>Mentors</h2>
-        <p>Basil Benedict Victor</p>
-        <p>Sir Sanchayan Kumar Ray</p>
-
-        <h2>DBPC Tech Team 2024-25</h2>
-
-        <h2>Photography Team</h2>
-        <p>Ronit Das</p>
-        <p>Naveen Martin</p>
-
-
-    </div>
-
-    <script>
-      // Function to toggle mobile menu visibility
-      function toggleMenu() {
-          const menu = document.getElementById('mobile-menu');
-          menu.classList.toggle('show');  // Toggle the "show" class to display/hide the menu
-      }
-    </script>
 </body>
 </html>
